@@ -1,13 +1,138 @@
+/* ************************puplic style*************************** */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f1f5f8;
+  color: #102a42;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ************************main*************************** */
+main {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ************************section*************************** */
+section {
+  width: 90vw;
+  max-width: 620px;
+}
+
+/* ************************title*************************** */
+.title {
+  margin: 4rem 0;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 30px;
+  position: relative;
+}
+.title:hover::after {
+  width: 50%;
+}
+.title::after {
+  position: absolute;
+  content: "";
+  bottom: -10px;
+  width: 30%;
+  right: 50%;
+  transform: translatex(50%);
+  background: #49a6e9;
+  height: 4px;
+  transition: width 0.5s ease;
+}
+
+/* ************************single-tour*************************** */
+.single-tour {
+  margin: 2rem 0;
+  font-size: 0;
+  border-radius: 0.25rem;
+}
+.single-tour img {
+  height: 20rem;
+  width: 100%;
+  object-fit: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.single-tour footer {
+  padding: 1.5rem 2rem;
+  background-color: #fff;
+  font-size: 1rem;
+  border-bottom-left-radius: 0.25rem;
+  border-bottom-right-radius: 0.25rem;
+}
+.single-tour footer .tour-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.single-tour footer .tour-info .tour-price {
+  background-color: #ebf7ff;
+  padding: 0.25rem 0.5rem;
+  color: #49a6e9;
+  border-radius: 0.25rem;
+  min-width: fit-content;
+}
+.single-tour footer p {
+  color: #617d98;
+  margin-bottom: 1.25rem;
+}
+.single-tour footer p .read-btn {
+  color: #49a6e9;
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.single-tour footer .interested-btn {
+  width: 200px;
+  margin: 0 auto;
+  display: block;
+  padding: 0.25rem 0.5rem;
+  background: transparent;
+  color: #bb2525;
+  border: 1px solid #bb2525;
+  border-radius: 0.25rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+/* ********************no-tours******************** */
+.no-tours {
+  font-size: 3rem;
+  letter-spacing: 0.1rem;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+@media (max-width: 575px) {
+  .no-tours {
+    font-size: 2rem;
+  }
+}
+.refresh-btn {
+  background: #49a6e9;
+  display: block;
+  padding: 0.5rem;
+  text-transform: capitalize;
+  color: #fff;
+  letter-spacing: 0.1rem;
+  border: 0;
+  outline: 0;
+  cursor: pointer;
+  border-radius: 0.25rem;
+  margin: 0 auto;
 }
